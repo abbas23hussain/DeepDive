@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ea136e0bfcfad44b95019b475c85c3, type: 3}
+  m_Name: OceanColors
+  m_EditorClassIdentifier: 
+  oceanColors:
+  - presetName: Cyan
+    density: 1
+    waterColor: {r: 0.07058822, g: 0.42718735, b: 0.4627451, a: 0}
+    fogTop: {r: 0.29803923, g: 0.5316567, b: 0.5411765, a: 0}
+    fogBottom: {r: 0.2509804, g: 0.4509803, b: 0.4509804, a: 0}
+    overLayColor: {r: 0.65882355, g: 0.9137255, b: 1, a: 0}
+    lipColor: {r: 0.21960784, g: 0.40392157, b: 0.3780348, a: 0}
+    waveColor: {r: 0.2509804, g: 0.5019608, b: 0.48707846, a: 0}
+  - presetName: Blue
+    density: 1.75
+    waterColor: {r: 0.07058824, g: 0.27450982, b: 0.4627451, a: 0}
+    fogTop: {r: 0.29803923, g: 0.4087455, b: 0.5411765, a: 0}
+    fogBottom: {r: 0.2509804, g: 0.36664245, b: 0.4509804, a: 0}
+    overLayColor: {r: 0.65882355, g: 0.79854447, b: 1, a: 0}
+    lipColor: {r: 0.21960784, g: 0.2777857, b: 0.40392157, a: 0}
+    waveColor: {r: 0.2509804, g: 0.35830787, b: 0.5019608, a: 0}
+  - presetName: Purple
+    density: 2.5
+    waterColor: {r: 0.3491206, g: 0.07058822, b: 0.4627451, a: 0}
+    fogTop: {r: 0.48214167, g: 0.29803923, b: 0.5411765, a: 0}
+    fogBottom: {r: 0.42895558, g: 0.2509804, b: 0.4509804, a: 0}
+    overLayColor: {r: 0.99670756, g: 0.65882355, b: 1, a: 0}
+    lipColor: {r: 0.38740572, g: 0.21960784, b: 0.40392157, a: 0}
+    waveColor: {r: 0.45238376, g: 0.2509804, b: 0.5019608, a: 0}
+  - presetName: Green
+    density: 3.25
+    waterColor: {r: 0.07058822, g: 0.4627451, b: 0.24158475, a: 0}
+    fogTop: {r: 0.29803923, g: 0.5411765, b: 0.38451585, a: 0}
+    fogBottom: {r: 0.2509804, g: 0.4509804, b: 0.30661443, a: 0}
+    overLayColor: {r: 0.65882355, g: 1, b: 0.70869875, a: 0}
+    lipColor: {r: 0.21960784, g: 0.40392157, b: 0.25100416, a: 0}
+    waveColor: {r: 0.2509804, g: 0.5019608, b: 0.30996922, a: 0}
+  - presetName: Yellow
+    density: 4
+    waterColor: {r: 0.69266415, g: 0.7264151, b: 0.051397286, a: 0}
+    fogTop: {r: 0.5226601, g: 0.5411765, b: 0.29803923, a: 0}
+    fogBottom: {r: 0.44309166, g: 0.4509804, b: 0.2509804, a: 0}
+    overLayColor: {r: 1, g: 0.99302673, b: 0.65882355, a: 0}
+    lipColor: {r: 0.40392157, g: 0.39439785, b: 0.21960784, a: 0}
+    waveColor: {r: 0.5019608, g: 0.49770647, b: 0.2509804, a: 0}
+  - presetName: Red
+    density: 5
+    waterColor: {r: 0.6981132, g: 0.016464932, b: 0.0369142, a: 0}
+    fogTop: {r: 0.5411765, g: 0.29803923, b: 0.32040253, a: 0}
+    fogBottom: {r: 0.4509804, g: 0.2509804, b: 0.28136095, a: 0}
+    overLayColor: {r: 1, g: 0.65882355, b: 0.72065336, a: 0}
+    lipColor: {r: 0.40392157, g: 0.21960784, b: 0.2566974, a: 0}
+    waveColor: {r: 0.5019608, g: 0.2509804, b: 0.33393833, a: 0}

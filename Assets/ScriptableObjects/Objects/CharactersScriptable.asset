@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0fc4307fdf845439d6fe0414d7a948, type: 3}
+  m_Name: CharactersScriptable
+  m_EditorClassIdentifier: 
+  characters:
+  - characterName: f_1
+    characterMesh: {fileID: -5083298690019172076, guid: ee2d8904250bdbe41823b3fd80e1c0ed, type: 3}
+  - characterName: f_2
+    characterMesh: {fileID: 3749275365186329671, guid: 9c97e6658b39da64ebba637632808d6f, type: 3}
+  - characterName: f_3
+    characterMesh: {fileID: -4249736173505520152, guid: 47d5eb072a2e6f64389e35465ddc5d84, type: 3}
+  - characterName: f_4
+    characterMesh: {fileID: -3621512494326337241, guid: 15ad84679e2a5cc41a73bd38ddd5bdc0, type: 3}
+  - characterName: f_5
+    characterMesh: {fileID: -9192327096240124142, guid: b066a2de5d3913240a242839061e4858, type: 3}
+  - characterName: f_6
+    characterMesh: {fileID: -3928362930134012488, guid: d1cc9cecd549bad4482f5eb01dfe1a1f, type: 3}
+  - characterName: f_7
+    characterMesh: {fileID: 3308960370967651984, guid: f405b00f4ccb08f4d96251b272281524, type: 3}
+  - characterName: f_8
+    characterMesh: {fileID: -4384709491593097276, guid: 6bd1f54632dc6c04bb80a3b02c53f51b, type: 3}
+  - characterName: f_9
+    characterMesh: {fileID: -5417196834632472698, guid: c1c8ebf3eb594fd40b35e1be395cc523, type: 3}
+  - characterName: f_10
+    characterMesh: {fileID: 964950681899091939, guid: 72f866b13bed43c48bc784b73325644a, type: 3}
+  - characterName: f_11
+    characterMesh: {fileID: -1181756159812213717, guid: 0bcea2eaf09c13f42a7159c5bc3dac06, type: 3}
+  - characterName: f_12
+    characterMesh: {fileID: -1181756159812213717, guid: 0bcea2eaf09c13f42a7159c5bc3dac06, type: 3}
+  - characterName: m_1
+    characterMesh: {fileID: -5227254852015584856, guid: 3f6e11902d4852c44b7496ed3731d0a2, type: 3}
+  - characterName: m_2
+    characterMesh: {fileID: -1095667649842655724, guid: 61e8dd751773b58489dfd92f800b2aea, type: 3}
+  - characterName: m_3
+    characterMesh: {fileID: -621149055772548596, guid: 515df49454bc19548b8f9c38047b97ea, type: 3}
+  - characterName: m_4
+    characterMesh: {fileID: -2048735107454046573, guid: b06016527e626224696be997056d2cd8, type: 3}
+  - characterName: m_5
+    characterMesh: {fileID: -4968518958633997398, guid: 7b4eebd9e8aacdb488d818e1e6a53f46, type: 3}
+  - characterName: m_6
+    characterMesh: {fileID: -8291792681201356760, guid: 91d2a847229c60d4b8f390d00e676eb4, type: 3}
+  - characterName: m_7
+    characterMesh: {fileID: 104714896159193702, guid: 34fbb603f8a80134fb6c1f586f13aa39, type: 3}
+  - characterName: m_8
+    characterMesh: {fileID: -3529028288821891885, guid: c73d5095a5ed1e74b940550b64ec39e1, type: 3}
+  - characterName: m_9
+    characterMesh: {fileID: -1576537691316460908, guid: 6726085f17b77e04ba082f82f95fc050, type: 3}
+  - characterName: m_10
+    characterMesh: {fileID: -3665699625205391469, guid: 17d4921d1b81c4e4985c39a6d49b3e6f, type: 3}
+  - characterName: m_11
+    characterMesh: {fileID: 8166804075931293967, guid: 40e457564573808459e26dc03432886c, type: 3}
+  - characterName: m_12
+    characterMesh: {fileID: -1313512963275463407, guid: cdcc274f8ffb47a469d07051f449abd5, type: 3}
+  - characterName: m_13
+    characterMesh: {fileID: -8178735500773464720, guid: 51ddffb212d33784fa0ee03e43ef85fe, type: 3}
