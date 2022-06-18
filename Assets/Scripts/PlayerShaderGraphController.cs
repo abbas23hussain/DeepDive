@@ -51,7 +51,7 @@ public class PlayerShaderGraphController : MonoBehaviour
 
     private void OnStaminaUpdated(float ratio)
     {
-        ratio = Math.Clamp(ratio, 0f, 1f);
+        ratio = Mathf.Clamp(ratio, 0f, 1f);
         Purplify(ratio);
     }
 

@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     void LerpMoveHorizontally()
     {
-        var xPosition = transform.position.x + Input.GetAxis("Mouse X");
+        var xPosition = transform.position.x + Input.GetAxis("Mouse X") * 0.1f;
         xPosition = Mathf.Clamp(xPosition, 248.5f, 251.5f);
         transform.position = new Vector3(xPosition, transform.position.y, transform.position.z);
     }
@@ -164,7 +164,7 @@ public class PlayerController : MonoBehaviour
             {
                 currentStamina -= 10;
             }
-            currentStamina = Math.Clamp(currentStamina, 0, maxStamina);
+            currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
             float ratio = 1f - currentStamina / (float) maxStamina;
             EventManager.onStaminaUpdated?.Invoke(ratio);
             if (currentStamina == 0)

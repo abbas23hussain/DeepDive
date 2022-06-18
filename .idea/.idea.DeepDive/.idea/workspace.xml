@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7deef284-aae0-4335-9575-72ade37b57ed" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepDive/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepDive/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepDive/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepDive/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DeepDive/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DeepDive/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerShaderGraphController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerShaderGraphController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/PackAssets/PostProcessing/Surface.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/PackAssets/PostProcessing/Surface.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/PackAssets/PostProcessing/Underwater.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/PackAssets/PostProcessing/Underwater.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Atlantic Cod.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Atlantic Cod.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Catfish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Catfish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Common Carp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Common Carp.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Flowerhorn.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Flowerhorn.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Herring.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Herring.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Koi.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Koi.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Piranha.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Piranha.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Red Snapper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Red Snapper.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Salmon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Salmon.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Sea Bass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Flocking/Sea Bass.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Bottlenose Dolphin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Bottlenose Dolphin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Great White Shark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Great White Shark.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Hammerhead Shark.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Hammerhead Shark.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Orca.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Orca.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Pufferfish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Pufferfish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Sea Turtle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Sea Turtle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Swordfish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ventuar/UnderwaterPack/Prefabs/Fish/Single/Swordfish.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
@@ -24,8 +70,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/OceanColorController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SplashController.cs" />
         <option value="$PROJECT_DIR$/Assets/Water_Splashes/Scripts/Small_Splash.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraShake.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShaderGraphController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -52,10 +99,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="17368">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="17368" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -71,11 +118,23 @@
       <option name="presentableId" value="Default" />
       <updated>1655487209003</updated>
       <workItem from="1655487228022" duration="4631000" />
+      <workItem from="1655511223124" duration="1943000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state width="2517" height="519" key="GridCell.Tab.0.bottom" timestamp="1655509061871">
       <screen x="0" y="0" width="2560" height="1400" />
