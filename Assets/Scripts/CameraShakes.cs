@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour
+public class CameraShakes : MonoBehaviour
 {
     public int strength;
     public int vibrato;
