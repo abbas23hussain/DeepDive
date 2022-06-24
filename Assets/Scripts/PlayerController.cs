@@ -46,32 +46,30 @@ public class PlayerController : MonoBehaviour
         downForce = downForce / waterDensity;
     }
 
-    private void Update()
+
+    private void OnMouseDrag()
     {
         if (playerRigidBody == null)
         {
             return;
         }
-
-        if (Input.GetMouseButton(0))
+        if (GameManager.Instance.GameState == eGameState.Gameplay)
         {
-            if (GameManager.Instance.GameState == eGameState.Gameplay)
-            {
-                Dive();
-            }
+            Dive();
         }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (GameManager.Instance.GameState == eGameState.Gameplay)
+    }
+    private void OnMouseUp()
+    {
+        if (GameManager.Instance.GameState == eGameState.Gameplay)
             {
                 Stop();
             }
-        }
     }
+
 
     void FixedUpdate()
     {
+
         if (playerRigidBody == null)
         {
             return;
