@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public int currentStamina;
     private int speedLevel;
 
+    public GameObject water;
+
     private void Awake()
     {
         BindEvents();
@@ -46,30 +48,27 @@ public class PlayerController : MonoBehaviour
         downForce = downForce / waterDensity;
     }
 
-
-    private void OnMouseDrag()
+    void FixedUpdate()
     {
-        if (playerRigidBody == null)
+        if (Input.GetMouseButton(0))
         {
-            return;
+            if (playerRigidBody == null)
+            {
+                return;
+            }
+            if (GameManager.Instance.GameState == eGameState.Gameplay)
+            {
+                Dive();
+            }
         }
-        if (GameManager.Instance.GameState == eGameState.Gameplay)
+        if (Input.GetMouseButtonUp(0))
         {
-            Dive();
-        }
-    }
-    private void OnMouseUp()
-    {
-        if (GameManager.Instance.GameState == eGameState.Gameplay)
+            
+            if (GameManager.Instance.GameState == eGameState.Gameplay)
             {
                 Stop();
             }
-    }
-
-
-    void FixedUpdate()
-    {
-
+        }
         if (playerRigidBody == null)
         {
             return;
@@ -98,6 +97,12 @@ public class PlayerController : MonoBehaviour
 
     void Dive()
     {
+
+        if(water != null)
+        {
+            Destroy(water, 0.5f);
+        }
+
         playerRigidBody.velocity = downForce;
         LerpMoveHorizontally();
     }
