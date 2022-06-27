@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.Universal;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody playerRigidBody { get; private set; }
@@ -21,7 +19,11 @@ public class PlayerController : MonoBehaviour
     private int speedLevel;
 
     public GameObject water;
-
+    public GameObject followerSea;
+    public Image staminaImage;
+    public SkinnedMeshRenderer playerHead;
+    public Renderer headMaterial;
+    public float materialColorValue;
     private void Awake()
     {
         BindEvents();
@@ -51,6 +53,19 @@ public class PlayerController : MonoBehaviour
         downForce = downForce / waterDensity;
     }
 
+    private void Update()
+    {
+        if (currentStamina <= 254)
+        {
+            headMaterial.material.color = new Color(1, materialColorValue, materialColorValue);            
+        }
+        else if (currentStamina > 255)
+        {
+            headMaterial.material.color = new Color(1, 1, 1);
+        }
+    }
+
+
     void FixedUpdate()
     {
         if (Input.GetMouseButton(0))
@@ -62,6 +77,8 @@ public class PlayerController : MonoBehaviour
             if (GameManager.Instance.GameState == eGameState.Gameplay)
             {
                 Dive();
+                followerSea.SetActive(true);
+
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -165,14 +182,14 @@ public class PlayerController : MonoBehaviour
             if (playerRigidBody.velocity.y == 0)
             {
                 currentStamina+= 5;
-               
-              
+                staminaImage.DOColor(new Color(0, 0.4509804f, 1, 0), 0.25f);
+                materialColorValue += 0.01f;
             }
             else
             {
                 currentStamina -= 10;
-                
-               
+                staminaImage.DOColor(new Color(0, 0.4509804f, 1, 1), currentStamina * 0.0001f);
+                materialColorValue -= 0.02f;
             }
             currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
             float ratio = 1f - currentStamina / (float) maxStamina;
