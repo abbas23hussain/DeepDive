@@ -27,7 +27,7 @@ public class MainMenuController : MonoBehaviour
         charactersDD.options.Clear();
         boatsDD.options.Clear();
         PopulateCharacters();
-        PopulateBoats();
+       // PopulateBoats();
     }
 
     private void PopulateCharacters()
@@ -36,11 +36,11 @@ public class MainMenuController : MonoBehaviour
         charactersDD.AddOptions(chars);
     }
 
-    private void PopulateBoats()
-    {
-        var boatList = boatsManager.boats.Select(i=>i.boatName).ToList();
-        boatsDD.AddOptions(boatList);
-    }
+    //private void PopulateBoats()
+    //{
+    //    var boatList = boatsManager.boats.Select(i=>i.boatName).ToList();
+    //    boatsDD.AddOptions(boatList);
+    //}
 
     private void AddListeners()
     {

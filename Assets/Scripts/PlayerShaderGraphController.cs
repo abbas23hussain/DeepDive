@@ -9,7 +9,7 @@ public class PlayerShaderGraphController : MonoBehaviour
     //[SerializeField] private Light pointLight;
     [SerializeField] private Gradient purpleGradient;
     [SerializeField] private PostProcessVolume vignetteProfile;
-    private Vignette m_Vignette;
+    public Vignette m_Vignette;
     private Material purpleMaterial;
     private static readonly int LerpAmount = Shader.PropertyToID("_LerpAmount");
 

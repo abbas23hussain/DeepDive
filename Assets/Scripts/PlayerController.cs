@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         BindEvents();
+
     }
 
     private void OnDestroy()
@@ -162,10 +165,14 @@ public class PlayerController : MonoBehaviour
             if (playerRigidBody.velocity.y == 0)
             {
                 currentStamina+= 5;
+               
+              
             }
             else
             {
                 currentStamina -= 10;
+                
+               
             }
             currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
             float ratio = 1f - currentStamina / (float) maxStamina;
