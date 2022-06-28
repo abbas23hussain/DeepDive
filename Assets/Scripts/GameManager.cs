@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     
     [SerializeField] private GameObject gameOverPanel, mainMenuPanel, hud, pauseMenu;
-    [SerializeField] private Button retryButton, playButton, pauseButton;
+    [SerializeField] private Button  playButton, pauseButton;
     [SerializeField] private Button cyan, blue, purple, green, yellow, red;
     [SerializeField] private OceanColorsScriptable oceanColorsScriptable;
     [SerializeField] private PowerUpsManager powerUpsManager;
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
 
     private void AddListeners()
     {
-        retryButton.onClick.AddListener(OnRetryButtonPressed);
+        //retryButton.onClick.AddListener(OnRetryButtonPressed);
         playButton.onClick.AddListener(OnPlayButtonPressed);
         pauseButton.onClick.AddListener(OnPauseButtonPressed);
         cyan.onClick.AddListener(delegate
@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
 
     private void RemoveListeners()
     {
-        retryButton.onClick.RemoveAllListeners();
+        //retryButton.onClick.RemoveAllListeners();
         playButton.onClick.RemoveAllListeners();
         pauseButton.onClick.RemoveAllListeners();
         cyan.onClick.RemoveAllListeners();
@@ -158,8 +158,8 @@ public class GameManager : MonoBehaviour
 
     private void OnRetryButtonPressed()
     {
-        retryButton.gameObject.SetActive(false);
-        SceneManager.LoadScene(0);
+        //retryButton.gameObject.SetActive(false);
+        //SceneManager.LoadScene(0);
     }
 
     private void OnPlayButtonPressed()

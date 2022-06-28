@@ -57,11 +57,11 @@ public class PlayerController : MonoBehaviour
     {
         if (currentStamina <= 254)
         {
-            headMaterial.material.color = new Color(1, materialColorValue, materialColorValue);            
+            playerHead.materials[1].color = new Color(1, materialColorValue, materialColorValue);            
         }
         else if (currentStamina > 255)
         {
-            headMaterial.material.color = new Color(1, 1, 1);
+            playerHead.materials[1].color = new Color(1, 1, 1);
         }
     }
 
