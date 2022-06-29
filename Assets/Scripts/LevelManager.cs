@@ -2,7 +2,7 @@
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-
+using ElephantSDK;
 
 public class LevelManager : MonoBehaviour
 {
@@ -41,24 +41,31 @@ public class LevelManager : MonoBehaviour
     }
     public void NextLevel()
     {
-       
-        if (_currentLevel == 0)
-        {
+        //AllReset();
+        Elephant.LevelFailed(0);
+        _currentLevel = 0;
+        PlayerPrefs.SetInt("currentLevel", _currentLevel);
+        SceneManager.LoadScene(1);
+        PlayerPrefs.SetInt("levelNumber", _levelNumber + 1);
 
-            //AllReset();
-            _currentLevel = 0;
-            PlayerPrefs.SetInt("currentLevel", _currentLevel);
-            SceneManager.LoadScene(1);
-            PlayerPrefs.SetInt("levelNumber", _levelNumber + 1);
-        }
-        else
-        {
+        //if (_currentLevel == 0)
+        //{
 
-            LevelRecord();
-            SceneManager.LoadScene("Level" + (_currentLevel + 1));
-            _levelNumber++;
+        //    //AllReset();
+        //    Elephant.LevelFailed(0);
+        //    _currentLevel = 0;
+        //    PlayerPrefs.SetInt("currentLevel", _currentLevel);
+        //    SceneManager.LoadScene(1);
+        //    PlayerPrefs.SetInt("levelNumber", _levelNumber + 1);
+        //}
+        //else
+        //{
 
-        }
+        //    LevelRecord();
+        //    SceneManager.LoadScene("Level" + (_currentLevel + 1));
+        //    _levelNumber++;
+
+        //}
         
 
     }
