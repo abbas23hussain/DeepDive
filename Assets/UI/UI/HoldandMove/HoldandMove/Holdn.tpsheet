@@ -1,0 +1,29 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:672e3f0e4aa028eb20dbdc5119c73eba:19190958f661c9139bb148db8fb619c8:4a66870551e610adc7f8d6e730f5eb8c$
+#
+:format=40300
+:texture=Holdn.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+HoldnMove_01;0;1548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_02;500;1548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_03;1000;1548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_04;1500;1548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_05;0;1048;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_06;500;1048;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_07;1000;1048;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_08;1500;1048;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_09;0;548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_10;500;548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_11;1000;548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_12;1500;548;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_13;0;48;500;500; 0.5;0.5; 0;0;0;0
+HoldnMove_14;500;48;500;500; 0.5;0.5; 0;0;0;0

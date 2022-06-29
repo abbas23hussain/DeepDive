@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody playerRigidBody { get; private set; }
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public SkinnedMeshRenderer playerHead;
     public Renderer headMaterial;
     public float materialColorValue;
+    public TextMeshProUGUI mText;
     private void Awake()
     {
         BindEvents();
@@ -63,6 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             playerHead.materials[1].color = new Color(1, 1, 1);
         }
+        mText.text = ((int)transform.position.y + "m").ToString();
     }
 
 

@@ -42,11 +42,11 @@ public class LevelManager : MonoBehaviour
     public void NextLevel()
     {
        
-        if (_currentLevel == 2)
+        if (_currentLevel == 0)
         {
 
             //AllReset();
-            _currentLevel = 1;
+            _currentLevel = 0;
             PlayerPrefs.SetInt("currentLevel", _currentLevel);
             SceneManager.LoadScene(1);
             PlayerPrefs.SetInt("levelNumber", _levelNumber + 1);
