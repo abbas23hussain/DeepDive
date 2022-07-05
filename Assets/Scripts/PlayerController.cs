@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public SkinnedMeshRenderer playerHead;
     public Renderer headMaterial;
     public float materialColorValue;
+    public float materialColorCounter;
     public TextMeshProUGUI mText;
     private void Awake()
     {
@@ -67,6 +68,12 @@ public class PlayerController : MonoBehaviour
             playerHead.materials[0].color = new Color(1, 1, 1);
             playerHead.materials[1].color = new Color(1, 1, 1);
             materialColorValue = 1;
+            materialColorCounter = 1;
+        }
+        if(materialColorValue >= 1)
+        {
+            materialColorValue = 1;
+            materialColorCounter = 1;
         }
         mText.text = ((int)transform.position.y + "m").ToString();
     }
@@ -141,7 +148,8 @@ public class PlayerController : MonoBehaviour
     }
     void Stop()
     {
-        playerRigidBody.velocity = Vector3.zero;
+        //playerRigidBody.velocity = Vector3.zero;
+        playerRigidBody.velocity = Vector3.Lerp(transform.position,Vector3.zero,1);
         EventManager.onPlayerStop?.Invoke();
 
     }
@@ -189,13 +197,18 @@ public class PlayerController : MonoBehaviour
             {
                 currentStamina+= 5;
                 staminaImage.DOColor(new Color(0, 0.4509804f, 1, 0), 0.25f);
-                materialColorValue += 0.05f;
+                materialColorCounter += 0.05f; 
+                //materialColorCounter = Mathf.Pow(materialColorCounter, 2);
+                materialColorValue = materialColorCounter;
+                //materialColorValue += 0.1f;
             }
             else
             {
                 currentStamina -= 10;
                 staminaImage.DOColor(new Color(0, 0.4509804f, 1, 1), currentStamina * 0.0001f);
-                materialColorValue -= 0.1f;
+                materialColorCounter -= 0.01f;
+                materialColorCounter = Mathf.Pow(materialColorCounter, 2);
+                materialColorValue = materialColorCounter;
             }
             currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
             float ratio = 1f - currentStamina / (float) maxStamina;
