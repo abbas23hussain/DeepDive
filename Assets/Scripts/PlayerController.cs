@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
     public float materialColorValue;
     public float materialColorCounter;
     public TextMeshProUGUI mText;
+
+    public bool isDive;
+
+
     private void Awake()
     {
         BindEvents();
@@ -76,12 +80,29 @@ public class PlayerController : MonoBehaviour
             materialColorCounter = 1;
         }
         mText.text = ((int)transform.position.y + "m").ToString();
+
+
+        if (Input.GetMouseButton(0))
+        {
+            isDive = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            isDive = false;
+            Debug.Log("Dive stop");
+            if (GameManager.Instance.GameState == eGameState.Gameplay)
+            {
+                Stop();
+            }
+        }
+
+
     }
 
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && isDive)
         {
             if (playerRigidBody == null)
             {
@@ -94,14 +115,8 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        if (Input.GetMouseButtonUp(0))
-        {
-            
-            if (GameManager.Instance.GameState == eGameState.Gameplay)
-            {
-                Stop();
-            }
-        }
+   
+       
         if (playerRigidBody == null)
         {
             return;
@@ -149,8 +164,8 @@ public class PlayerController : MonoBehaviour
     void Stop()
     {
         //playerRigidBody.velocity = Vector3.zero;
-        playerRigidBody.velocity = Vector3.Lerp(transform.position,Vector3.zero,1);
-        EventManager.onPlayerStop?.Invoke();
+        playerRigidBody.velocity = Vector3.Lerp(transform.position, Vector3.zero, 1);
+        //EventManager.onPlayerStop?.Invoke();
 
     }
     void DiveDown()
