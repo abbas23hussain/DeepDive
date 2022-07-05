@@ -57,13 +57,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (currentStamina <= 254)
+        if (currentStamina <= 100)
         {
+            playerHead.materials[0].color = new Color(1, materialColorValue, materialColorValue);
             playerHead.materials[1].color = new Color(1, materialColorValue, materialColorValue);            
         }
-        else if (currentStamina > 255)
+        else if (currentStamina > 101)
         {
+            playerHead.materials[0].color = new Color(1, 1, 1);
             playerHead.materials[1].color = new Color(1, 1, 1);
+            materialColorValue = 1;
         }
         mText.text = ((int)transform.position.y + "m").ToString();
     }
@@ -186,13 +189,13 @@ public class PlayerController : MonoBehaviour
             {
                 currentStamina+= 5;
                 staminaImage.DOColor(new Color(0, 0.4509804f, 1, 0), 0.25f);
-                materialColorValue += 0.01f;
+                materialColorValue += 0.05f;
             }
             else
             {
                 currentStamina -= 10;
                 staminaImage.DOColor(new Color(0, 0.4509804f, 1, 1), currentStamina * 0.0001f);
-                materialColorValue -= 0.02f;
+                materialColorValue -= 0.1f;
             }
             currentStamina = Mathf.Clamp(currentStamina, 0, maxStamina);
             float ratio = 1f - currentStamina / (float) maxStamina;
