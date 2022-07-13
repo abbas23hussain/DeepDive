@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class DataSaveController : MonoBehaviour
 {
-    
+    public static DataSaveController instance;
     public PowerUpsData powerUpsData = new PowerUpsData();
     public Money money = new Money();
 
     private void Awake()
     {
+        instance = this;
         BindEvents();
     }
 
@@ -88,6 +89,7 @@ public class DataSaveController : MonoBehaviour
         {
             money.Coins = PlayerPrefs.GetInt("Coins");
         }
+        
     }
 
     private void LoadPowerUps()

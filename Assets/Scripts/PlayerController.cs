@@ -27,16 +27,18 @@ public class PlayerController : MonoBehaviour
     public float materialColorValue;
     public float materialColorCounter;
     public TextMeshProUGUI mText;
-
+    public float maxMeter;
+    public GameObject winPanel;
+    public bool isWin;
     public bool isDive;
-
-
+    public float coinTextTime;
+    public GameObject coinTextPrefab;
     private void Awake()
     {
         BindEvents();
 
     }
-
+    
     private void OnDestroy()
     {
         UnbindEvents();
@@ -58,6 +60,8 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidBody = GetComponent<Rigidbody>();
         downForce = downForce / waterDensity;
+        maxMeter = PlayerPrefs.GetFloat("SaveMeter", -49);
+        mText.text = ((-1 * (int)maxMeter + (int)transform.position.y) + "m").ToString();
     }
 
     private void Update()
@@ -79,17 +83,38 @@ public class PlayerController : MonoBehaviour
             materialColorValue = 1;
             materialColorCounter = 1;
         }
-        mText.text = ((int)transform.position.y + "m").ToString();
+        if(materialColorValue <= 0.01)
+        {
+            materialColorValue = 0;
+            
+        }
+        
+        
+        //        -51                   -50 
+        if(transform.position.y <= maxMeter - 1 && !isWin)
+        {
+            Debug.Log("Game Win");
+            winPanel.SetActive(true);
+            maxMeter -= 50;
+            PlayerPrefs.SetFloat("SaveMeter", maxMeter);
+            if (GameManager.Instance.GameState == eGameState.Gameplay)
+            {
+                Stop();
+            }
+            isWin = true;
+            isDive = false;
+        }
 
-
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && !isWin)
         {
             isDive = true;
+            mText.text = ((-1 * (int)maxMeter + (int)transform.position.y) + "m").ToString();
+            
         }
         if (Input.GetMouseButtonUp(0))
         {
             isDive = false;
-            Debug.Log("Dive stop");
+            
             if (GameManager.Instance.GameState == eGameState.Gameplay)
             {
                 Stop();
@@ -114,6 +139,12 @@ public class PlayerController : MonoBehaviour
                 followerSea.SetActive(true);
 
             }
+            coinTextTime -= Time.deltaTime;
+            if (coinTextTime <= 0)
+            {
+                Instantiate(coinTextPrefab, transform.position, Quaternion.identity);
+                coinTextTime = 1;
+            }
         }
    
        
@@ -122,7 +153,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (isDiving)
+        if (isDiving && !isWin)
         {
             float currentTime = Time.time;
             float t;

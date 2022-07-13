@@ -109,7 +109,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void OnGameOver()
     {
-        skinnedMeshRenderer.gameObject.SetActive(false);
+        //skinnedMeshRenderer.gameObject.SetActive(false);
         Explode();
     }
 

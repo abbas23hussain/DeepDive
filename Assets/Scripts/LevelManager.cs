@@ -44,6 +44,7 @@ public class LevelManager : MonoBehaviour
         //AllReset();
         Elephant.LevelFailed(0);
         _currentLevel = 0;
+       
         PlayerPrefs.SetInt("currentLevel", _currentLevel);
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("levelNumber", _levelNumber + 1);
