@@ -10,7 +10,7 @@ public class CoinText : MonoBehaviour
     
     void Start()
     {
-        coinText.text = "+"+(DataSaveController.instance.money.Coins + 2).ToString();
+        coinText.text = "+"+(PowerUpsManager.instance.MoneyLevel).ToString();
         transform.DOMoveX(transform.position.x + 2, 0.5f).OnComplete(() => Destroy(gameObject));
         EventManager.onCoinCollected?.Invoke(this.gameObject);
     }

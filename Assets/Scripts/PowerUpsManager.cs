@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PowerUpsManager : MonoBehaviour
 {
+    public static PowerUpsManager instance;
+
     public int StaminaLevel { get; private set; } = 1;
 
     public int MoneyLevel { get; private set; } = 1;
@@ -14,6 +16,7 @@ public class PowerUpsManager : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         BindEvents();
     }
 

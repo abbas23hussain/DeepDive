@@ -137,14 +137,15 @@ public class PlayerController : MonoBehaviour
             {
                 Dive();
                 followerSea.SetActive(true);
+                coinTextTime -= Time.deltaTime;
+                if (coinTextTime <= 0)
+                {
+                    Instantiate(coinTextPrefab, transform.position, Quaternion.identity);
+                    coinTextTime = 1;
+                }
 
             }
-            coinTextTime -= Time.deltaTime;
-            if (coinTextTime <= 0)
-            {
-                Instantiate(coinTextPrefab, transform.position, Quaternion.identity);
-                coinTextTime = 1;
-            }
+           
         }
    
        
