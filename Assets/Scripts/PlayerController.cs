@@ -33,6 +33,18 @@ public class PlayerController : MonoBehaviour
     public bool isDive;
     public float coinTextTime;
     public GameObject coinTextPrefab;
+
+    public GameObject seaObject1;
+    public GameObject seaObject2;
+    public GameObject seaObject3;
+    public GameObject seaObject4;
+    public GameObject seaObject5;
+    public GameObject seaObject6;
+
+    public GameObject[] polyObject;
+    public int seaObjectCount;
+    public ParticleSystem poof;
+
     private void Awake()
     {
         BindEvents();
@@ -62,6 +74,17 @@ public class PlayerController : MonoBehaviour
         downForce = downForce / waterDensity;
         maxMeter = PlayerPrefs.GetFloat("SaveMeter", -49);
         mText.text = ((-1 * (int)maxMeter + (int)transform.position.y) + "m").ToString();
+        poof.Stop();
+        seaObject1.transform.position = new Vector3(transform.position.x, transform.position.y +(maxMeter /2) , transform.position.z);
+        seaObject2.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 3), transform.position.z);
+        seaObject3.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 1.5f), transform.position.z);
+        if(maxMeter <= -150)
+        {
+            seaObject4.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 2.5f), transform.position.z);
+            seaObject5.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter + 15), transform.position.z);
+            seaObject6.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter + 30), transform.position.z);
+        }
+        
     }
 
     private void Update()
@@ -166,7 +189,20 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("SeaObject"))
+        {
+            poof.Play();
+            polyObject[seaObjectCount].SetActive(true);
+            Destroy(other.gameObject);
+            seaObjectCount++;
+            speedLevel += 2;
+        }
+    }
+
+
     void InitPowerUpLevels()
     {
         var powerUpsManager = GameManager.Instance.GetPowerUpsManager();
