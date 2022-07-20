@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     private int baseStamina = 100;
     private int maxStamina;
     public int currentStamina;
-    private int speedLevel;
+    public float speedLevel;
 
     public GameObject water;
     public GameObject followerSea;
@@ -44,6 +44,11 @@ public class PlayerController : MonoBehaviour
     public GameObject[] polyObject;
     public int seaObjectCount;
     public ParticleSystem poof;
+    public GameObject powerBox1;
+    public GameObject powerBox2;
+    public GameObject powerBox3;
+    public GameObject powerBox4;
+    public GameObject powerBox5;
 
     private void Awake()
     {
@@ -72,19 +77,33 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidBody = GetComponent<Rigidbody>();
         downForce = downForce / waterDensity;
-        maxMeter = PlayerPrefs.GetFloat("SaveMeter", -49);
+        maxMeter = PlayerPrefs.GetFloat("SaveMeter", -249);
         mText.text = ((-1 * (int)maxMeter + (int)transform.position.y) + "m").ToString();
         poof.Stop();
-        seaObject1.transform.position = new Vector3(transform.position.x, transform.position.y +(maxMeter /2) , transform.position.z);
+        seaObject1.transform.position = new Vector3(transform.position.x, transform.position.y +(maxMeter /4) , transform.position.z);
         seaObject2.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 3), transform.position.z);
-        seaObject3.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 1.5f), transform.position.z);
+        seaObject3.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 2), transform.position.z);
         if(maxMeter <= -150)
         {
-            seaObject4.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 2.5f), transform.position.z);
-            seaObject5.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter + 15), transform.position.z);
-            seaObject6.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter + 30), transform.position.z);
+            seaObject4.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 1.5f), transform.position.z);
+            seaObject5.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter / 1.25f), transform.position.z);
+            //seaObject6.transform.position = new Vector3(transform.position.x, transform.position.y + (maxMeter + 30), transform.position.z);
         }
+        if(maxMeter <= -250)
+        {
+            powerBox2.transform.position = new Vector3(seaObject1.transform.position.x, seaObject2.transform.position.y - 20, seaObject1.transform.position.z);
+        }
+        if(maxMeter <= -500)
+        {
+            powerBox3.transform.position = new Vector3(seaObject1.transform.position.x, seaObject3.transform.position.y - 20, seaObject1.transform.position.z);
+            powerBox4.transform.position = new Vector3(seaObject1.transform.position.x, seaObject4.transform.position.y - 20, seaObject1.transform.position.z);
+            powerBox5.transform.position = new Vector3(seaObject1.transform.position.x, seaObject5.transform.position.y - 20, seaObject1.transform.position.z);
+        }
+        powerBox1.transform.position = new Vector3(seaObject1.transform.position.x, transform.position.y -30 , seaObject1.transform.position.z);
         
+
+
+
     }
 
     private void Update()
@@ -194,14 +213,31 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("SeaObject"))
         {
+            PowerUpSeaObjact(other.gameObject);
+        }
+        if (other.gameObject.CompareTag("Palet"))
+        {
             poof.Play();
-            polyObject[seaObjectCount].SetActive(true);
             Destroy(other.gameObject);
-            seaObjectCount++;
-            speedLevel += 2;
+            polyObject[0].SetActive(true);
+            polyObject[1].SetActive(true);
+            seaObjectCount += 2;
+            speedLevel += 0.5f;
+        }
+        if (other.gameObject.CompareTag("PowerBox"))
+        {
+            transform.DOMoveY(transform.position.y - 20, 1);
+            poof.Play();
         }
     }
-
+    public void PowerUpSeaObjact(GameObject otherGameobject)
+    {
+        poof.Play();
+        polyObject[seaObjectCount].SetActive(true);
+        Destroy(otherGameobject.gameObject);
+        seaObjectCount++;
+        speedLevel += 0.25f;
+    }
 
     void InitPowerUpLevels()
     {
@@ -219,7 +255,7 @@ public class PlayerController : MonoBehaviour
             Destroy(water, 0.5f);
         }
 
-        playerRigidBody.velocity = downForce;
+        playerRigidBody.velocity = downForce * speedLevel;
         LerpMoveHorizontally();
     }
 
@@ -278,7 +314,7 @@ public class PlayerController : MonoBehaviour
         {
             if (playerRigidBody.velocity.y == 0)
             {
-                currentStamina+= 5;
+                currentStamina+= 10;
                 staminaImage.DOColor(new Color(0, 0.4509804f, 1, 0), 0.25f);
                 materialColorCounter += 0.05f; 
                 //materialColorCounter = Mathf.Pow(materialColorCounter, 2);

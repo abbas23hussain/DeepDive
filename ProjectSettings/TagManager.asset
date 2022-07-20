@@ -8,6 +8,9 @@ TagManager:
   - Milestone
   - Missile
   - SeaObject
+  - PowerUp
+  - PowerBox
+  - Palet
   layers:
   - Default
   - TransparentFX
