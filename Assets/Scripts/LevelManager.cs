@@ -42,10 +42,14 @@ public class LevelManager : MonoBehaviour
     public void NextLevel()
     {
         //AllReset();
-        Elephant.LevelFailed(0);
+        
         _currentLevel = 0;
-       
+        
+        Elephant.LevelCompleted(_levelNumber + 1);
+        
+        Debug.Log("Level finish" + _levelNumber + 1);
         PlayerPrefs.SetInt("currentLevel", _currentLevel);
+        _levelNumber++;
         SceneManager.LoadScene(1);
         PlayerPrefs.SetInt("levelNumber", _levelNumber + 1);
 
@@ -72,7 +76,9 @@ public class LevelManager : MonoBehaviour
     }
     public void Reset()
     {
-       // UIManager.instance.LoseGamePanel(false);
+        // UIManager.instance.LoseGamePanel(false);
+        Debug.Log("Level lose" + _levelNumber + 1);
+        Elephant.LevelFailed(_levelNumber + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void LevelRecord()

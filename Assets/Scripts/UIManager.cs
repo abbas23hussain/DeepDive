@@ -6,13 +6,14 @@ public class UIManager : MonoBehaviour
 
     public void StartButton()
     {
-        Elephant.LevelStarted(0);
+        Elephant.LevelStarted(LevelManager.instance._levelNumber + 1);
+        Debug.Log("Level start" + LevelManager.instance._levelNumber + 1);
         //LevelManager.instance.NextLevel();
     }
 
     public void RestartButton()
     {
-        Elephant.LevelFailed(0);
+        
         LevelManager.instance.NextLevel();
     }
 
